@@ -41,7 +41,7 @@ const fetchDataSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.isLoading = false;
         //console.log(action.payload);
-        state.products = state.products.concat(action.payload);
+        state.products = action.payload;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         console.log(action.error.message);
