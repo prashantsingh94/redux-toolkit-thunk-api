@@ -6,7 +6,7 @@ export default function App() {
   const dispatch = useDispatch();
   const { products, isLoading, error } = useSelector((store) => store.products);
   console.log(isLoading);
-  //console.log(products);
+  console.log(products);
   return (
     <div className="App">
       <h1>Redux Toolkit Couter Application</h1>
