@@ -6,7 +6,7 @@ const FETCH_PRODUCT_URL =
 const initialState = {
   isLoading: false,
   products: [],
-  error: null
+  error: null,
 };
 
 export const fetchProducts = createAsyncThunk(
@@ -14,8 +14,8 @@ export const fetchProducts = createAsyncThunk(
   async (postId, thunkAPI) => {
     console.log(postId, thunkAPI);
     console.log(thunkAPI.getState());
-    console.log(thunkAPI.dispatch(increment()));
-    console.log(thunkAPI.getState());
+    //console.log(thunkAPI.dispatch(increment()));
+    //console.log(thunkAPI.getState());
     try {
       const response = await axios.get(FETCH_PRODUCT_URL);
       //console.log(response);
@@ -48,7 +48,7 @@ const fetchDataSlice = createSlice({
         state.isLoading = false;
         state.error = "There are some error while fetching the data!";
       });
-  }
+  },
 });
 
 //const { fetchData } = fetchDataSlice.actions
