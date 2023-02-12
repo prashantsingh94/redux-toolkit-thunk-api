@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 export default function App() {
   const dispatch = useDispatch();
   const { products, isLoading, error } = useSelector((store) => store.products);
-  //console.log(isLoading);
+  console.log(isLoading);
   //console.log(products);
   return (
     <div className="App">
